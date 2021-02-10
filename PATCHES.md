@@ -8,7 +8,6 @@ This is an overview over all patches that are currently used.
 
 | Side | Patch        | Author           | CoAuthors  |
 | ----- | ------------- |:-------------:| -----:|
-| server |  (PaperPR) Inline shift direction fields      | Andrew Steinborn |  |
 | server |  AFK API      | William Blake Galbreath |  |
 | api |  AFK API      | William Blake Galbreath |  |
 | server |  Ability to re-add farmland mechanics from Alpha      | Yive |  |
@@ -68,7 +67,8 @@ This is an overview over all patches that are currently used.
 | server |  Add wither skeleton takes wither damage option      | William Blake Galbreath |  |
 | server |  Advancement API      | William Blake Galbreath |  |
 | api |  Advancement API      | William Blake Galbreath |  |
-| server |  AirplaneLite MC Dev Fixes      | Paul Sauve |  |
+| server |  Airplane Configuration      | Paul Sauve |  |
+| server |  Airplane MC Dev Fixes      | Paul Sauve |  |
 | server |  Allow Entities to be removed from a world while ticking      | Spottedleaf |  |
 | server |  Allow anvil colors      | William Blake Galbreath |  |
 | server |  Allow color codes in books      | William Blake Galbreath |  |
@@ -150,9 +150,8 @@ This is an overview over all patches that are currently used.
 | server |  Don&#39;t trigger Lootable Refresh for non player interaction      | Aikar |  |
 | server |  Don&#39;t wake up entities when damage event is cancelled      | Phoenix616 |  |
 | server |  Dont send useless entity packets      | William Blake Galbreath |  |
-| server |  DragonEggPlaceEvent      | William Blake Galbreath |  |
-| api |  DragonEggPlaceEvent      | William Blake Galbreath |  |
 | server |  Duplicate paper&#39;s vanilla scoreboard colors patch to sync      | William Blake Galbreath |  |
+| server |  Dynamic activation range      | Paul Sauve |  |
 | server |  EMC - Configurable disable give dropping      | Aikar |  |
 | server |  EMC - MonsterEggSpawnEvent      | Aikar |  |
 | api |  EMC - MonsterEggSpawnEvent      | Aikar |  |
@@ -162,8 +161,6 @@ This is an overview over all patches that are currently used.
 | server |  Entities can use portals configuration      | William Blake Galbreath |  |
 | server |  Entities pick up loot bypass mob-griefing gamerule      | William Blake Galbreath |  |
 | server |  Entity lifespan      | William Blake Galbreath |  |
-| server |  EntityMoveEvent      | William Blake Galbreath |  |
-| api |  EntityMoveEvent      | William Blake Galbreath |  |
 | server |  Execute chunk tasks mid-tick      | Spottedleaf |  |
 | api |  ExecuteCommandEvent      | William Blake Galbreath |  |
 | server |  Farmland trampling changes      | Mariell Hoversholm |  |
@@ -171,6 +168,7 @@ This is an overview over all patches that are currently used.
 | server |  Fix Bukkit.createInventory() with type LECTERN      | willies952002 |  |
 | server |  Fix IndexOutOfBoundsException when sending too many changes      | Ivan Pekov |  |
 | server |  Fix LightEngineThreaded memory leak      | Ivan Pekov |  |
+| server |  Fix NPE in ControllerLookWASD and ControllerMoveWASD      | ishland |  |
 | server |  Fix PlayerEditBookEvent not saving new book      | BillyGalbreath |  |
 | server |  Fix cow rotation when shearing mooshroom      | William Blake Galbreath |  |
 | server |  Fix death message colors      | William Blake Galbreath |  |
@@ -348,6 +346,7 @@ This is an overview over all patches that are currently used.
 | server |  Time scoreboard search      | Spottedleaf |  |
 | server |  Timings stuff      | William Blake Galbreath |  |
 | server |  Toggle for Zombified Piglin death always counting as player      | jmp |  |
+| server |  Toggle for water sensitive mob damage      | YouHaveTrouble |  |
 | server |  Totems work in inventory      | draycia |  |
 | server |  Tuinity POM Changes      | Spottedleaf |  |
 | api |  Tuinity POM Changes      | Spottedleaf |  |
