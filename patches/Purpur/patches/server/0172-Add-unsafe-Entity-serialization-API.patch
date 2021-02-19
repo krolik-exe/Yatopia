@@ -17,10 +17,10 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 diff --git a/src/main/java/net/minecraft/server/EntityTypes.java b/src/main/java/net/minecraft/server/EntityTypes.java
-index 919cf670327bed6faa50f29c9bf7a9b54174f7f2..631eb682e81e30d2a937fd1eafccd8a9ab82d21e 100644
+index 06fe0fca1936853748997c63f325df99da5fa2ee..730b91680b226df624180d64019c2984d0e29422 100644
 --- a/src/main/java/net/minecraft/server/EntityTypes.java
 +++ b/src/main/java/net/minecraft/server/EntityTypes.java
-@@ -380,6 +380,7 @@ public class EntityTypes<T extends Entity> {
+@@ -394,6 +394,7 @@ public class EntityTypes<T extends Entity> {
          return this.bf.create(this, world);
      }
  
