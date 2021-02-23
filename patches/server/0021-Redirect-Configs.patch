@@ -4,31 +4,6 @@ Date: Wed, 5 Aug 2020 08:17:46 -0500
 Subject: [PATCH] Redirect Configs
 
 
-diff --git a/src/main/java/de/minebench/origami/OrigamiConfig.java b/src/main/java/de/minebench/origami/OrigamiConfig.java
-index 15aa603a771c327879a4088609850fb86c6347bd..553d6fafbcabafeb008fcf5b60adb8d1a5ffeb6b 100644
---- a/src/main/java/de/minebench/origami/OrigamiConfig.java
-+++ b/src/main/java/de/minebench/origami/OrigamiConfig.java
-@@ -20,6 +20,8 @@ public final class OrigamiConfig {
-     private static int configVersion;
- 
-     public static void init(final File file) {
-         OrigamiConfig.configFile = file;
-         OrigamiConfig.config = new YamlConfiguration();
-         config.options().header(CONFIG_HEADER);
-@@ -39,13 +41,16 @@ public final class OrigamiConfig {
-                 System.out.println("Failure to load origami config");
-                 throw new RuntimeException(ex);
-             }
-         }
- 
-         OrigamiConfig.load(OrigamiConfig.class, null);
-     }
- 
-     public static void load(Class<?> clazz, Object instance) {
-         OrigamiConfig.configVersion = OrigamiConfig.getInt("config-version-please-do-not-modify-me", CURRENT_CONFIG_VERSION);
- 
-         for (final Method method : clazz.getDeclaredMethods()) {
-             if (method.getReturnType() != void.class || method.getParameterCount() != 0 ||
 diff --git a/src/main/java/net/minecraft/server/DedicatedServer.java b/src/main/java/net/minecraft/server/DedicatedServer.java
 index 9c3f16cc4e424fa2293c9b795960110b36b55df4..c2f749e73cd9e175b019ed720a5021f411213624 100644
 --- a/src/main/java/net/minecraft/server/DedicatedServer.java
