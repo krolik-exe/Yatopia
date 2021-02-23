@@ -21,20 +21,14 @@ index 15aa603a771c327879a4088609850fb86c6347bd..553d6fafbcabafeb008fcf5b60adb8d1
                  System.out.println("Failure to load origami config");
                  throw new RuntimeException(ex);
              }
--        }
--
--        OrigamiConfig.load(OrigamiConfig.class, null);
-+        }*/
-+	    config = org.yatopiamc.yatopia.server.YatopiaConfig.config;
-+	    configFile = org.yatopiamc.yatopia.server.YatopiaConfig.CONFIG_FILE;
-+	    configVersion = org.yatopiamc.yatopia.server.YatopiaConfig.version;
-+	    OrigamiConfig.load(OrigamiConfig.class, null); // todo: uncomment when config options are ported
-+        // Yatopia end
+         }
+ 
+         OrigamiConfig.load(OrigamiConfig.class, null);
      }
  
      public static void load(Class<?> clazz, Object instance) {
 -        OrigamiConfig.configVersion = OrigamiConfig.getInt("config-version-please-do-not-modify-me", CURRENT_CONFIG_VERSION);
-+        //OrigamiConfig.configVersion = OrigamiConfig.getInt("config-version-please-do-not-modify-me", CURRENT_CONFIG_VERSION); // Yatopia - NO
++        OrigamiConfig.configVersion = OrigamiConfig.getInt("config-version-please-do-not-modify-me", CURRENT_CONFIG_VERSION); // Yatopia - NO
  
          for (final Method method : clazz.getDeclaredMethods()) {
              if (method.getReturnType() != void.class || method.getParameterCount() != 0 ||
