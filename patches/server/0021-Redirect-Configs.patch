@@ -12,8 +12,6 @@ index 15aa603a771c327879a4088609850fb86c6347bd..553d6fafbcabafeb008fcf5b60adb8d1
      private static int configVersion;
  
      public static void init(final File file) {
-+        // Yatopia start
-+        /*
          OrigamiConfig.configFile = file;
          OrigamiConfig.config = new YamlConfiguration();
          config.options().header(CONFIG_HEADER);
@@ -27,8 +25,7 @@ index 15aa603a771c327879a4088609850fb86c6347bd..553d6fafbcabafeb008fcf5b60adb8d1
      }
  
      public static void load(Class<?> clazz, Object instance) {
--        OrigamiConfig.configVersion = OrigamiConfig.getInt("config-version-please-do-not-modify-me", CURRENT_CONFIG_VERSION);
-+        OrigamiConfig.configVersion = OrigamiConfig.getInt("config-version-please-do-not-modify-me", CURRENT_CONFIG_VERSION); // Yatopia - NO
+         OrigamiConfig.configVersion = OrigamiConfig.getInt("config-version-please-do-not-modify-me", CURRENT_CONFIG_VERSION);
  
          for (final Method method : clazz.getDeclaredMethods()) {
              if (method.getReturnType() != void.class || method.getParameterCount() != 0 ||
@@ -40,7 +37,7 @@ index 9c3f16cc4e424fa2293c9b795960110b36b55df4..c2f749e73cd9e175b019ed720a5021f4
          // Yatopia start
          // Configuration moved to org.bukkit.craftbukkit.Main
          // Yatopia end
--
+- 
 +        de.minebench.origami.OrigamiConfig.init((java.io.File) options.valueOf("origami-settings"));
          this.setPVP(dedicatedserverproperties.pvp);
          this.setAllowFlight(dedicatedserverproperties.allowFlight);
