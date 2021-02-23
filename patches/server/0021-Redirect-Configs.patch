@@ -1,11 +1,1 @@
-From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
-From: tr7zw <tr7zw@live.de>
-Date: Wed, 5 Aug 2020 08:17:46 -0500
-Subject: [PATCH] Redirect Configs
 
-
-diff --git a/src/main/java/net/minecraft/server/DedicatedServer.java b/src/main/java/net/minecraft/server/DedicatedServer.java
-index 9c3f16cc4e424fa2293c9b795960110b36b55df4..c2f749e73cd9e175b019ed720a5021f411213624 100644
-
-diff --git a/src/main/java/org/bukkit/craftbukkit/Main.java b/src/main/java/org/bukkit/craftbukkit/Main.java
-index c2193e6faf762e3df1c37fe21712fe123864755c..4a647eff3aad8e2ee19dd96e0483a702946220e3 100644
