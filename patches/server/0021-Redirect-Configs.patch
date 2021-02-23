@@ -6,27 +6,6 @@ Subject: [PATCH] Redirect Configs
 
 diff --git a/src/main/java/net/minecraft/server/DedicatedServer.java b/src/main/java/net/minecraft/server/DedicatedServer.java
 index 9c3f16cc4e424fa2293c9b795960110b36b55df4..c2f749e73cd9e175b019ed720a5021f411213624 100644
---- a/src/main/java/net/minecraft/server/DedicatedServer.java
-+++ b/src/main/java/net/minecraft/server/DedicatedServer.java
-@@ -184,7 +184,7 @@ public class DedicatedServer extends MinecraftServer implements IMinecraftServer
-         // Yatopia start
-         // Configuration moved to org.bukkit.craftbukkit.Main
-         // Yatopia end
-- 
-+        de.minebench.origami.OrigamiConfig.init((java.io.File) options.valueOf("origami-settings"));
-         this.setPVP(dedicatedserverproperties.pvp);
-         this.setAllowFlight(dedicatedserverproperties.allowFlight);
-         this.setResourcePack(dedicatedserverproperties.resourcePack, this.ba());
+
 diff --git a/src/main/java/org/bukkit/craftbukkit/Main.java b/src/main/java/org/bukkit/craftbukkit/Main.java
 index c2193e6faf762e3df1c37fe21712fe123864755c..4a647eff3aad8e2ee19dd96e0483a702946220e3 100644
---- a/src/main/java/org/bukkit/craftbukkit/Main.java
-+++ b/src/main/java/org/bukkit/craftbukkit/Main.java
-@@ -303,7 +303,7 @@ public class Main {
-                 }
-                 // Paper end
-                 System.setProperty( "library.jansi.version", "Paper" ); // Paper - set meaningless jansi version to prevent git builds from crashing on Windows
-                 de.minebench.origami.OrigamiConfig.init((java.io.File) options.valueOf("origami-settings")); // Origami - Server Config
-                 System.out.println("Loading libraries, please wait...");
-                 org.yatopiamc.yatopia.server.YatopiaConfig.init((java.io.File) options.valueOf("yatopia-settings")); // Yatopia - Server Configuration
-                 net.minecraft.server.Main.main(options);
-             } catch (Throwable t) {
